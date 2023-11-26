@@ -11,7 +11,7 @@
     "wrangler": "wrangler pages dev ./public --local --persist",
     "generate": "drizzle-kit generate:sqlite --schema=./app/lib/schema.ts",
     "up": "drizzle-kit up:sqlite",
-    "test:e2e": "vitest -c ./vitest.config.e2e.ts --coverage"
+    "test": "vitest -c ./vitest.config.ts --coverage --run"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.1",
