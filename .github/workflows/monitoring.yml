@@ -27,4 +27,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: monitoring
-        run: scripts/test.sh ${{matrix.flavor.env}} ${{matrix.flavor.url}} 
+        run: scripts/test.sh monitoring ${{matrix.flavor.env}} ${{matrix.flavor.url}} monitoring
