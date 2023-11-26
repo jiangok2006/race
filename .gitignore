@@ -1,10 +1,16 @@
-node_modules
+node_modules/
 
 /.cache
 /functions/\[\[path\]\].js
 /functions/\[\[path\]\].js.map
 /public/build
 .wrangler/state/v3/
-.dev.vars
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
 .env
 
+.dev.vars
+coverage/

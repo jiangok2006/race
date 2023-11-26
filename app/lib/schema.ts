@@ -1,4 +1,3 @@
-import type { InferModel } from "drizzle-orm";
 import {
   integer,
   sqliteTable,
@@ -22,8 +21,8 @@ export const users = sqliteTable(
   })
 );
 
-export type User = InferModel<typeof users>;
-export type NewUser = InferModel<typeof users, "insert">;
+export type User = typeof users.$inferSelect
+export type NewUser = typeof users.$inferInsert
 
 export const teams = sqliteTable("teams", {
   id: integer("id").primaryKey({
