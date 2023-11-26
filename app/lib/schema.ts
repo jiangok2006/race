@@ -5,6 +5,9 @@ import {
   uniqueIndex,
 } from "drizzle-orm/sqlite-core";
 
+//////////////
+// users
+//////////////
 export const users = sqliteTable(
   "users",
   {
@@ -24,6 +27,9 @@ export const users = sqliteTable(
 export type User = typeof users.$inferSelect
 export type NewUser = typeof users.$inferInsert
 
+//////////////
+// teams
+//////////////
 export const teams = sqliteTable("teams", {
   id: integer("id").primaryKey({
     autoIncrement: true,
@@ -40,3 +46,9 @@ export const usersToTeams = sqliteTable("usersToTeams", {
     .notNull()
     .references(() => teams.id),
 });
+
+//////////////
+// warehouses
+//////////////
+
+
