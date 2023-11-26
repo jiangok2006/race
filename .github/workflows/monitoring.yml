@@ -14,16 +14,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test_matrix:
+  monitoring_matrix:
     strategy:
       matrix:
-        flavor: [staging]
+        flavor: [ 
+          {env: preview, url: dev.race-dui.pages.dev} , 
+          {env: production, url: race-dui.pages.dev}
+        ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: monitoring
-        run: scripts/test.sh ${{matrix.flavor}}
-        env:
-            APP_HTTP_URL: ${{ vars.APP_HTTP_URL }}
+        run: scripts/test.sh ${{matrix.flavor.env}} ${{matrix.flavor.url}}
