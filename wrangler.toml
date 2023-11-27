@@ -2,6 +2,7 @@ compatibility_date = "2022-04-05"
 compatibility_flags = ["streams_enable_constructors"]
 
 [[ d1_databases ]]
-binding = "DB" # i.e. available in your Worker on env.DB
+binding = "DB"
 database_name = "race-preview"
 database_id = "a030e5b3-b444-4e77-bab0-70bdbbc806f6"
+migrations_dir = "drizzle/"
