@@ -24,3 +24,7 @@ test('signup and signin', async ({ page }) => {
   await expect(page.getByLabel('Select a team')).toBeVisible();
 });
 
+test('The page should show remix string1', async ({ page }) => {
+  await page.goto(process.env.APP_HTTP_URL!);
+  await expect(page).toHaveTitle(/Remix Race Stack/);
+});
