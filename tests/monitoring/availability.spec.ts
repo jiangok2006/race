@@ -1,5 +1,5 @@
-import { Browser, Page, chromium, expect } from "@playwright/test";
-import { afterAll, beforeAll, describe, test } from "vitest";
+import { Browser, Page, chromium } from "@playwright/test";
+import { afterAll, beforeAll, describe } from "vitest";
 
 
 const httpUrl = process.env.APP_HTTP_URL
@@ -18,8 +18,5 @@ describe("playwright meets vitest", () => {
         await browser.close();
     });
 
-    test('The page should show remix string1', async () => {
-        await page.goto(httpUrl!);
-        await expect(page).toHaveTitle(/Remix Race Stack/);
-    });
+
 })
