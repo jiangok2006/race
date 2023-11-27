@@ -3,7 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 test('signup and signin', async ({ page }) => {
   let email = 'test-' + uuidv4() + '@test.com'
-  let password = "gjhg$*^!@12AS" // process.env.TEST_USER_PASSWORD!
+  let password = process.env.TEST_USER_PASSWORD!
+  console.log(`process.env.APP_HTTP_URL: ${process.env.APP_HTTP_URL}`)
   await page.goto(process.env.APP_HTTP_URL!);
   await page.getByRole('link', { name: 'Sign up' }).click();
   await page.getByPlaceholder('name@example.com').click();
