@@ -1,9 +1,9 @@
 name: Playwright Tests
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
+  schedule: # hourly
+    - cron: 0 * * * *
+
 jobs:
   test:
     timeout-minutes: 60
@@ -21,6 +21,7 @@ jobs:
     - name: Run Playwright tests
       env: 
         TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
+        APP_HTTP_URL: https://race-dui.pages.dev/
       run: npx playwright test
     - uses: actions/upload-artifact@v3
       if: always()
