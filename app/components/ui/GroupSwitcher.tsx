@@ -1,6 +1,5 @@
-import { Check, ChevronsUpDown, PlusCircle, User } from "lucide-react";
+import { Check, ChevronsUpDown, PlusCircle } from "lucide-react";
 
-import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,30 +12,13 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { ComponentPropsWithoutRef, useState } from "react";
+import { cn } from "@/lib/utils";
 import { useNavigate } from "@remix-run/react";
+import { ComponentPropsWithoutRef, useState } from "react";
 
 type PopoverTriggerProps = ComponentPropsWithoutRef<typeof PopoverTrigger>;
 
