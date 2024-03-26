@@ -1,20 +1,5 @@
-node_modules/
+node_modules
 
 /.cache
-/functions/\[\[path\]\].js
-/functions/\[\[path\]\].js.map
-/public/build
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-
+/build
 .env
-
-.dev.vars
-coverage/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-.wrangler/
