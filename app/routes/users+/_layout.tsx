@@ -6,23 +6,12 @@ import { LeftPane } from "./left_pane";
 export default function layout() {
     return (
         <>
+            {Header({})}
             <div>
-                layout page
+                {LeftPane({})}
+                <Outlet />
             </div>
-            <div>
-                {Header({})}
-            </div>
-            <div>
-                <div>
-                    {LeftPane({})}
-                </div>
-                <div>
-                    <Outlet />
-                </div>
-            </div>
-            <div>
-                {Footer({})}
-            </div>
+            {Footer({})}
         </>
     )
 }

@@ -40,3 +40,8 @@ Print routes for debug:
 npx remix routes
 ```
 
+# Learning
+1. [remix-flat-routes](https://github.com/kiliman/remix-flat-routes) uses remix.config.js. This project
+uses vite.config.ts which needs simple translation.
+
+2. `npm run dev` can hot reload.

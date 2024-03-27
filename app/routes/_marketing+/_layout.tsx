@@ -5,18 +5,11 @@ import { Header } from "~/components/header";
 export default function layout() {
     return (
         <>
-            <div>
-                layout page
-            </div>
-            <div>
-                {Header({})}
-            </div>
+            {Header({})}
             <div>
                 <Outlet />
             </div>
-            <div>
-                {Footer({})}
-            </div>
+            {Footer({})}
         </>
     )
 }
