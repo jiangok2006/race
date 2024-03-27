@@ -1,6 +1,7 @@
 import { Outlet } from "@remix-run/react";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
+import { LeftPane } from "./left_pane";
 
 export default function layout() {
     return (
@@ -12,7 +13,12 @@ export default function layout() {
                 {Header({})}
             </div>
             <div>
-                <Outlet />
+                <div>
+                    {LeftPane({})}
+                </div>
+                <div>
+                    <Outlet />
+                </div>
             </div>
             <div>
                 {Footer({})}
