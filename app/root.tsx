@@ -6,10 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import stylesheet from "~/tailwind.css?url";
+import stylesheet from "~/globals.css?url";
+import { cssBundleHref } from "@remix-run/css-bundle";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
+  ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {

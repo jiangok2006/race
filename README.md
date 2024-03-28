@@ -35,7 +35,7 @@ Make sure to deploy the output of `npm run build`
 - `build/server`
 - `build/client`
 
-Print routes for debug:
+Print routes for debugging:
 ```
 npx remix routes
 ```
@@ -45,3 +45,13 @@ npx remix routes
 uses vite.config.ts which needs simple translation.
 
 2. `npm run dev` can hot reload.
+
+3. updating tailwind needs to manually refresh the browser to see the change (not need to restart `npm run dev`).
+
+4. shift-command-L: multi-select editing.
+
+5. [tremor-raw](https://raw.tremor.so/docs/getting-started/installation/remix) seems to conflict with [shadcn](https://ui.shadcn.com/docs/installation/remix). For example, termor provides UI controls (many are coming soon) other than 
+visualization (I only need this). Both need to update tailwind.config.ts or
+tailwind.config.js by adding theme. Both requires app file structures. Tremor has only 139 stars while shadcn has 54k. I decided to make shadcn work.
+
+6. does shadcn need [node](https://ui.shadcn.com/docs/installation/vite)? If so, I cannot use it for cloudflare page.

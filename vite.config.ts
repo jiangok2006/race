@@ -3,6 +3,8 @@ import { installGlobals } from "@remix-run/node";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { flatRoutes } from 'remix-flat-routes'
+import path from "path"
+import react from "@vitejs/plugin-react"
 
 installGlobals();
 
@@ -14,5 +16,12 @@ export default defineConfig({
         return flatRoutes('routes', defineRoutes)
       },
     }
-  ), tsconfigPaths()],
+  ), tsconfigPaths(), react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
+
+
