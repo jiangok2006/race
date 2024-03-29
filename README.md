@@ -55,3 +55,9 @@ visualization (I only need this). Both need to update tailwind.config.ts or
 tailwind.config.js by adding theme. Both requires app file structures. Tremor has only 139 stars while shadcn has 54k. I decided to make shadcn work.
 
 6. does shadcn need [node](https://ui.shadcn.com/docs/installation/vite)? If so, I cannot use it for cloudflare page.
+
+7. shadcn [NavigationMenu](https://github.com/shadcn-ui/ui/issues/172) does not work.
+
+8. I am looking daisyui but see "You need Node.js and Tailwind CSS installed." https://daisyui.com/docs/install/. Does this mean daisy UI require node.js?
+
+9. https://github.com/jacob-ebey/remix-shadcn/tree/main is interesting.

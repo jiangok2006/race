@@ -17,8 +17,8 @@ export default function Index() {
   }
   return (
     <>
-       <Button variant="outline">Click me</Button>
-      {rows}
+       {/* <Button>Click me</Button> */}
+      {/* {rows} */}
     </>
   );
 }
