@@ -1,5 +1,5 @@
 import { title } from "@/config.shared";
-import type { MetaFunction } from "@remix-run/cloudflare";
+import { MetaFunction } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
 	return [
@@ -10,6 +10,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
 	return (
+		<>
 		<main className="container prose py-8">
 			<h1>Welcome to Remix</h1>
 			<ul>
@@ -38,5 +39,6 @@ export default function Index() {
 				</li>
 			</ul>
 		</main>
+		</>
 	);
 }
